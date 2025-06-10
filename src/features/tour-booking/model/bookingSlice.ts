@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
+import type { RootState } from "../../../app/store";
 //Инициализация стейтов
 interface BookingFormState {
     name: string;
@@ -74,6 +75,6 @@ const bookingSlice = createSlice({
         },
     },
 });
-
+export const selectBookingState = (state: RootState) => state.booking;
 export const {openModal, closeModal, updateFormField, resetForm, submitForm } = bookingSlice.actions;
 export default bookingSlice.reducer;
