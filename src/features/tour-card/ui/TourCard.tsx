@@ -1,8 +1,12 @@
 import React from "react";
+import dayjs from "dayjs";
+import "dayjs/locale/ru";
 import { Card, Button, Typography } from "antd";
 import { useAppDispatch } from "../../../app/store/hooks";
 import type {Tour} from "../../../entities/tour/model/types"
 import * as bookingActions from "../../tour-booking/model/bookingSlice"
+
+dayjs.locale("ru")
 
 const {Title, Text} = Typography;
 
@@ -18,11 +22,11 @@ export const TourCard: React.FC<{tour: Tour}> = ({tour}) => {
             style={{width: "100%"}}
         >
             <Title level={4}>{tour.title}</Title>
-            <Text>{tour.country}</Text>
+            <Text><strong>Страна: </strong>{tour.country}</Text>
             <br />
-            <Text>{tour.price}</Text>
+            <Text><strong>Цена: </strong>{tour.price}</Text>
             <br />
-            <Text>{tour.startDate}</Text>
+            <Text><strong>Дата Начала: </strong>{dayjs(tour.startDate).format("D MMMM YYYY")}</Text>
             <br />
             <Button
                 type="primary"
