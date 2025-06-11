@@ -1,15 +1,16 @@
-
-import './App.css'
+import { Provider } from "react-redux"
+import { TourPage } from "./pages/TourPage"
+import { store } from "./app/store"
+import { ConfigProvider } from "antd"
 
 function App() {
 
   return (
-    <>
-      <div>
-        
-      </div>
-      
-    </>
+    <Provider store={store}>
+      <ConfigProvider>
+        <TourPage />
+      </ConfigProvider>
+    </Provider>
   )
 }
 
