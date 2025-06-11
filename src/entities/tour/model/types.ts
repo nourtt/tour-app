@@ -33,4 +33,20 @@ export const mockTours: Tour[] = [
         price: '225000 KZT',
         startDate: '2025-07-01',
     },
+    {
+        id: '4',
+        title: 'Рим',
+        country: 'Италия',
+        image: 'https://7d9e88a8-f178-4098-bea5-48d960920605.selcdn.net/583665dc-c63e-4d7e-bdc4-c80bfad7756a/-/format/webp/-/resize/1300x/',
+        price: '200000 KZT',
+        startDate: '2025-07-01',
+    },
+    {
+        id: '5',
+        title: 'Бали',
+        country: 'Индонезия',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_rMpSPu5aNE95DdT--TRmui8DtuEa3UStpw&s',
+        price: '200000 KZT',
+        startDate: '2025-07-01',
+    }
 ]
