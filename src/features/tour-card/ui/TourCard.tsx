@@ -15,7 +15,7 @@ export const TourCard: React.FC<{tour: Tour}> = ({tour}) => {
     return (
         <Card
             cover={<img alt={tour.title} src={tour.image} height={250}></img>}
-            style={{width: 300}}
+            style={{width: "100%"}}
         >
             <Title level={4}>{tour.title}</Title>
             <Text>{tour.country}</Text>
